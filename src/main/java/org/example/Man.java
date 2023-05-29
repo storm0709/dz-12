@@ -14,7 +14,7 @@ public class Man extends Person{
         System.out.println("Not retired yet");
         return false;
     }
-    public void registerPartnership(){
+    public void registerPartnership(String lastName){
         setPartner(getLastName());
         System.out.println("This man is married to "+getPartner());
     }
@@ -22,10 +22,9 @@ public class Man extends Person{
     public void deregisterPartnership(){
         if (getPartner() == null){
             return;
-        }else if (getPartner()!= null){
-            setPartner("none");
-            setIsDevorced(true);
-            System.out.println("Partner is "+getPartner()+" isDivorced status is "+getIsDevorced());
         }
+        setPartner(null);
+        setIsDevorced(true);
+        System.out.println("Partner is "+getPartner()+" isDivorced status is "+getIsDevorced());
     }
 }

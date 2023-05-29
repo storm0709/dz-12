@@ -18,27 +18,29 @@ public class Woman extends Person {
         return false;
     }
 
-    public void registerPartnership() {
+    public void registerPartnership(String newLastName) {
+        setLastName(newLastName);
         setPartner(getLastName());
         System.out.println("This woman is married to " + getPartner());
     }
 
     public String getLastNameOriginal() {
+
         return lastNameOriginal;
     }
 
     public void setLastNameOriginal(String lastNameOriginal) {
+
         this.lastNameOriginal = lastNameOriginal;
     }
 
     public void deregisterPartnership() {
         if (getPartner() == null) {
             return;
-        } else if (getPartner() != null) {
-            setPartner("none");
-            setIsDevorced(true);
-            setLastName(lastNameOriginal);
-            System.out.println("Partner is " + getPartner() + " isDivorced status is " + getIsDevorced() + " LastName is " + getLastNameOriginal());
         }
+        setPartner(null);
+        setIsDevorced(true);
+        setLastName(lastNameOriginal);
+        System.out.println("Partner is " + getPartner() + " isDivorced status is " + getIsDevorced() + " LastName is " + getLastNameOriginal());
     }
 }

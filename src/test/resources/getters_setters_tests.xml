@@ -5,10 +5,9 @@
         <classes>
             <class name="WomanTests">
                 <methods>
-                    <include name="testGetLastNameOriginal"/>
+                    <include name="testLastNameOriginal"/>
                     <include name="testGetLastNameOriginalNotNull"/>
                     <include name="testSetLastNameOriginal"/>
-                    <include name="testSetLastNameOriginalNotNull"/>
                 </methods>
             </class>
         </classes>
