@@ -16,7 +16,7 @@ public abstract class Person {
     }
 
     public abstract boolean isRetired();
-    public abstract void registerPartnership();
+    public abstract void registerPartnership(String newLastName);
 
     private void deregisterPartnership(){
         if (isDevorced){
